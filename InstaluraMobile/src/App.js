@@ -25,9 +25,15 @@ export default class App extends Component<Props> {
   
   componentDidMount(){
     fetch('https://instalura-api.herokuapp.com/api/public/fotos/rafael')
-      .then(resposta =>resposta.json())
-      .then(json => this.setState({fotos: json}));
-  
+      .then(resposta => {
+        if(resposta.ok){
+          return resposta.json()
+        }
+      })
+      .then(json => {
+        console.warn(json);   
+        this.setState({fotos: json})    
+      });
   }
   
   render() {
