@@ -31,7 +31,7 @@ export default class App extends Component<Props> {
         }
       })
       .then(json => {
-        console.warn(json);   
+        // console.warn(json);   
         this.setState({fotos: json})    
       });
   }
