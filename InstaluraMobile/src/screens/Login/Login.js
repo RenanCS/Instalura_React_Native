@@ -30,15 +30,11 @@ export default class Login extends Component {
                 <TextInput style={styles.input} 
                     placeholder="Senha..."
                     onChangeText={texto => this.setState({senha: texto})}/>
-
-                <Button  title="xxxx" onPress={() => navigate('Feed', { name: 'Feed' })} accessibilityLabel="fdfdfdfdfdfd" />
-
-                
+                <Button title="Login" onPress={() => console.warn("Login")} />
                 </View>
             </View>
         );
     }
-
 }
 
 const styles = StyleSheet.create({
@@ -60,3 +56,4 @@ const styles = StyleSheet.create({
         borderBottomColor: '#ddd'
     }
 });
+
